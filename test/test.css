@@ -1,0 +1,65 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+  max-width: 89em;
+  min-width: 300px;
+  width: auto;
+  line-height: 1.4;
+  margin: auto;
+}
+
+.content {
+  padding: 20px;
+  font-size: 1.8em;
+  font-family: 'Liberation Serif', serif;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: black;
+  text-align: center;
+}
+
+
+.button {
+background-color: white;
+color: black;
+border: 2px solid #4CAF50;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-left:20px;
+font-size: 1.5em;
+}
+
+.button:hover {
+background-color: green;
+color: white;
+border: 2px solid #4CAF50;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-left:20px;
+font-size: 1.5em;
+}
+.button:active {
+background-color: green;
+color: white;
+border: 2px solid #4CAF50;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-left:20px;
+font-size: 1.5em;
+}
