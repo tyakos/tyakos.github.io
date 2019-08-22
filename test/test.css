@@ -10,6 +10,12 @@ body {
   margin: auto;
 }
 
+#head {
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    font-family: 'Liberation Serif', serif;
+}
+
 .content {
   padding: 20px;
   font-size: 1.8em;
@@ -23,6 +29,22 @@ body {
   background-color: grey;
   color: black;
   text-align: center;
+}
+
+ul {
+    display: block;
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#head .sections li {
+    float: left;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
 }
 
 
@@ -63,3 +85,4 @@ font-size: 16px;
 margin-left:20px;
 font-size: 1.5em;
 }
+
