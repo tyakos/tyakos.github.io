@@ -24,8 +24,9 @@ body {
 .background_index {
   background-image: url("img/signal_sample.png");
   background-repeat: no-repeat;
-  background-size: cover; /* keyword value */
-  background-size: contain;
+
+  background-size:100% 100%;
+
 }
 
 .background {
