@@ -12,6 +12,7 @@ body {
   margin: auto;
   background-color: white;
 
+
 }
 
 #head {
@@ -20,11 +21,23 @@ body {
     font-family: 'Liberation Serif', serif;
 }
 
+.background_index {
+  background-image: url("img/signal_sample.png");
+  background-repeat: no-repeat;
+
+  background-size:100% 100%;
+
+}
+
+.background {
+  background-color: white;
+}
+
 .content {
   padding: 40px;
   font-size: 1.8em;
   font-family: 'Liberation Serif', serif;
-  background-color: white;
+  background:rgba(255,255,255,0.7);/* here white cause body as white background */
 }
 
 .footer {
