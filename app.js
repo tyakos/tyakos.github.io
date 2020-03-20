@@ -41,6 +41,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
+    const urlParams = new URLSearchParams(window.location.search);
+    // github pages 404 hack
+    const p = urlParams.get("p")
+    if(p) {
+        router.navigate(p);
+    }
     router.resolve();
     router.updatePageLinks();
 })
