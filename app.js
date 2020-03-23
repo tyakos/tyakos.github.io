@@ -1,9 +1,16 @@
+let template = null;
+
 let update = function (templateName) {
-    return function () {
+    return function() {
+        template = templateName;
         fetch(`/templates/${templateName}.html`)
             .then(response => response.text())
             .then(function (text) {
-                document.getElementById("content").innerHTML = text;
+                if(templateName == template) {
+                    document.getElementById("content").innerHTML = text;
+                }
+            })
+            .finally(function() {
                 router.updatePageLinks();
             });
     }
