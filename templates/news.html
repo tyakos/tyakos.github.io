@@ -1,8 +1,53 @@
 <section class="section">
+
+    <div class="container">
+        <h1 class="title">24/03/20: More on the water meter</h1>
+        <div class="content is-medium">
+As our water meter project is reaching its final stages we would like to take this
+opportunity to go into some detail about our development process and how we
+have reached this point.
+
+We decided to focus on a DN50 water meter as we could cut the rather hefty cost of a meter in this range by a considerable amount. For DN50 meters there are two fairly common flowcell
+geometries; the first uses two reflective plates that sit in the flow and deflect the
+sound from one transducer to another, the second reflects sound of the bottom
+of the pipe to the other transducer (images can be seen below). The issue we
+found with both of these designs is that, because the transducers are exposed
+to the flow and one introduces reflectors to the flow, they both introduce dis-
+turbance into the flow and give an uneven flow profile.
+
+
+<img src="img/meter_sketch1.png" style="max-height:100%; max-width:48%" align="left"> 
+<img src="img/meter_sketch2.png" style="max-height:100%; max-width:48%" align="right">
+<div style="clear: both"></div>
+
+This is why we decided to create a completely non intrusive water meter, using an approach that is similar to the clamp-on ultrasonic meters. This
+way we do not introduce disturbances to the flow and the meter is watertight by
+design. As with anything new the design underwent many stages of trial and
+error being tested against the designs that are already out there.
+
+During our testing we focused on two main things:
+<ul>
+
+<li>∆ToF drift, this is the absolute error in the ∆ToF -- the difference in time between sound travelling with the flow and sound travelling against the flow. This is the parameter that determines the accuracy of the meter at low flow. For this, we have achieved typical values of under 20ps, which equates to accurate performance at flows as low as 70lph.</li>
+
+<li>The error due to swirl, this is the percentage increase in the ∆ToF when
+swirl is introduced into the flow. Swirl is one of the most common disturbances and can drastically affect the meter readings. We have found that for some ultrasonic meter designs it can introduce an error as big as 20%. Below is a picture of an attachment that we used upstream of our meter to generate swirl.</li>
+
+<img src="img/swirl_connector.png" style="max-height:100%; max-width:48%" align="center"> 
+<div style="clear: both"></div>
+</ul>
+
+We are finally satisfied with the flowcell performance and we are now focusing on testing and "debugging" it, as well as finishing other parts of the development, mainly the electronics.
+At the moment, we are looking for companies that would be able to help us with the testing and calibration.
+        </div>
+    </div>
+
+
+
     <div class="container">
         <h1 class="title">04/02/20: Water meter updates</h1>
         <div class="content is-medium">
-            Today I wanted to reveal a bit of information on one of the projects that we have been working on in the last few months.
+Today I wanted to reveal a bit of information on one of the projects that we have been working on in the last few months.
 
 We are entering the late phases in our inline DN50 ultrasonic water meter development. The demand for this class of meters have been growing and we are looking to provide a modern affordable solution.
 
@@ -15,7 +60,7 @@ The three main areas that we are trying to address in our meter are as follows:
 At the moment, we are gathering information from companies installing and maintaining the meters about the features that are important to them, common problems and misconceptions.</li>
 
 <li>Low cost. We aim to achieve this by having a fully injection moulded meter body, simple assembly and modular electronics. Currently we are working on the heart of the meter – the ultra-low power metrological module that does the ultrasonic measurements and the relevant flow calculations. Any additional functionality such as communication modules can be added on top of that. </li>
-<ul>
+</ul>
 
 <p>
 In case you would like request some additional information, are interested in testing one of our prototypes, wish for a specific feature or simply want to chat and provide feedback – feel free to contact us.
