@@ -23,6 +23,7 @@ router
     .on("/projects", update("projects"))
     .on("/contact", update("contact"))
     .on("/news", update("news"))
+    .on("/products", update("products"))
     .notFound(update("404"));
 
 document.addEventListener("DOMContentLoaded", function (event) {
