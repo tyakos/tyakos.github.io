@@ -13,6 +13,40 @@ tr:nth-child(even) {
 </style>
 
 <section class="section">
+	
+<div class="buttons has-addons is-centered">
+  <button class="button is-success is-selected">1</button>
+  <button class="button" href=/news_page2 data-navigo>2</button>
+</div>
+
+	    <div class="container">
+        <h1 class="title">18/02/22: Water meter calibration and ultra low flow data</h1>
+        <div class="content is-medium">
+       	<p> For the last two months we had our meters tested at a fantastic facility with very accurate equipement allowing both high and low flow testing. <br>
+       		Getting straight to the results (keep in mind this is a DN50 meter).
+			<ul>
+			 	<li>±1% error on 1 - 50 m<sup>3</sup>/h with 1% repeatability.</li>
+				<li>±5% error down to about 40 l/h with about 2% repeatability.</li>	 	
+			</ul>
+		The fastest flow we could test was about 59 m<sup>3</sup>/h. At that point the repeatability started going up to about 2%. This is, more or less, to be expected as 59 m<sup>3</sup>/h roughly corresponds to 10 m/s, which is typically the maximum measured flow speed by inline ultrasonic meters with a single transducer pair. <br>
+		The lowest flow that was tested was 15 l/h and we managed to get a measurement, but unfortunately there is no repeatability data that I can share.<br>
+		We are going to incorporate this data (including the ultra-low flow data points) into the calibration curve to futher improve linearity.
+		</p>	
+		<p>	The data suggests that the meter is actually R400 rather than R250 as we thought previously. Of course, more testing is required to verify that.<br>
+			However, we have decided that even R400 does not sound that impressive for a new ultrasonic meter. As mentioned, increasing Q<sub>3</sub> is difficult and probably unnecessary for a water meter. Hence Q<sub>1</sub> has to go down. 
+		</p>
+		<p>	Ultrasonic meters low-flow performance is commonly limited by zero-flow drift, which usually occurs with changes in temperature. Basically, this is the value that the meter reads when no flow is present.
+		    This introduces an absolute error into the measurements that mostly determines repeatability at low flows. For example, a zero-flow drift of ±1 l/h would give 2/40*100 = 5% repeatability at 40 l/h. <br>
+			So we have begun work on an improved version of the meter that would have a lower zero-flow drift and we will be testing the prototypes next week. 
+		</p>
+		<p>	Lastly, we have designed and built a few OEM-style modules with the minimum number of components in it, basically just the ultra-low-power ultrasonic measurement part: meter body, transducers and the electronics with a RS232/I<sub>2</sub>C/SPI interface. With enough demand we are planning to offer evaluation kits. As always, contact us at <a href="mailto:info@intsonic.com">info@intsonic.com</a> to register your interest.
+		</p>
+		<p> We will be back with more regular updates regarding this project!
+		</p>
+        </div>
+	    </div>
+			<br>
+
 
 	    <div class="container">
         <h1 class="title">09/11/21: Water meter: lid design updates</h1>
@@ -92,137 +126,7 @@ tr:nth-child(even) {
     </div>
 <br>
 
-
-
-	    <div class="container">
-        <h1 class="title">24/03/21: Water meter release announcement</h1>
-        <div class="content is-medium">
-        	<p>
-Exactly 1 year from the previous update, we are pleased to announce the upcoming release of our 50mm ultrasonic water meter. 
-<br>Our plan is to apply for a WRAS approval and perform calibration. After that we are having the first units field-tested. 
-<br>At the same time, we are planning to ship the first free samples and wait for your feedback! 
-<br>If you are interested in giving our meter a go – please drop us an email at <a href="mailto:info@intsonic.com">info@intsonic.com</a>.
-Please include the information about the installation conditions and any special requirements – we would like to cover as many use cases as possible and the number of meters is limited!
-	 	</p>
-<p>
-Now to the features, photos and the technical bits.
-</p>
-<img src="img/meter_photos/front_view2.jpg" style="max-width:24%" align="left">
-<img src="img/meter_photos/back_view2.jpg" style="max-width:24%" align="left">
-<img src="img/meter_photos/display_view2.jpg" style="max-width:24%" align="left">
-<img src="img/meter_photos/through_view2.jpg" style="max-width:24%" align="left">
-
-<div style="clear: both"></div>
- <ul>
- 	<li>Total meter length of 170mm, with 15mm long ISO 228 G 2 1/2  "  threads – for use with standard union connectors. Because of the small length a small section of the pipe needs to be removed to allow for the installation.</li>
-	<li>We have designed our meter for maximum reliability, safety and installation flexibility. As you can see on the photo, there is only one material in contact with water (which is already WRAS-approved) and the geometry ensures minimal pressure drop and flow disturbance.</li>
-	<li>Q<sub>3</sub> of 40 m<sup>3</sup>/h with a turndown ratio of 200 or better – <b>to be confirmed after calibration.</b>	</li>
-	<li>0-50<sup>o</sup>C nominal operating range. Inquire for applications up to 95<sup>o</sup>C.
-	<li>Waterproof design. All critical components are encapsulated so the meter can be submerged. </li>
-	<li>Real-time clock.</li>
-	<li>Battery powered by a single C-type cell. Preliminary testing indicates a battery life >20 years and we are doing extensive testing to make sure that at least 10 years are achieved under all use cases.</li>
-	<li>A connector incorporating pulsed output and RS485. </li>
-	<li>Dry pulsed output with a user-set pulse value, up to 300V. </li>
-	<li>RS485 serial communication with our own simple protocol to interface with the meter – more on that later. </li>
-	<li>Logging with a user set interval.</li>
-	<li>Alarms and error reporting: 
-		<ul>
-			<li>Flooding detection – the meter can detect if it is underwater. </li>
-			<li>Overload flow detection. </li>
-			<li>Reverse flow detection. The meter will record the reverse flow and volume values. </li>
-			<li>Liquid temperature monitoring and overheating. </li>
-			<li>Low battery. </li>
-		</ul>
-		Each of these can be set to trigger an alarm, which will be recorded in the log and reported over serial.
-	</li>
-</ul>
-Regarding the user interface and other features, here is a list of things that we want to include and which are currently in development. However we need to make sure that the meter complies with all the standards and regulations, so we cannot guarantee that all of them will make it into the final product. Watch out for updates in the coming weeks!
- <ul>
-	<li>LCD with a single button interface. We are implementing a menu to simplify the meter installation. For example, a pulse value for the pulsed output can be selected out of a list of standard values (1/10/100 litres). 
-		<br>After the meter installation is complete, this can be disabled and the button can only be used to cycle through volume, flow rate, time and date. Backlight on button press can be enabled to make it easier to take readings in places with poor lighting conditions. </li>
-	<li>Serial communications over RS485. The primary functions are meter setup, periodic reading reports (i.e. volume, flow rate, water temperature) and alarm notifications.
-	Simple command syntax is used to set things like logging period, meter reporting period, pulse nominal value and request the full log or the current meter status.</li>
-	<li>Each meter will have a unique identifier and password, as well as a user-set tag. This will allow several meters to be connected to the same bus and the settings to be locked to prevent unauthorised access. </li>
-</ul>
-Let us know if a more detailed discussion of this is of interest. 
-
-			</p>
-
-        </div>
-    </div>
-<br>
-
-
-    <div class="container">
-        <h1 class="title">24/03/20: More on the water meter</h1>
-        <div class="content is-medium">
-        	<p>
-As our water meter project is reaching its final stages we would like to take this
-opportunity to go into some detail about our development process and how we
-have reached this point.
-
-We decided to focus on a DN50 water meter as we could cut the rather hefty cost of a meter in this range by a considerable amount. For DN50 meters there are two fairly common flowcell
-geometries; the first uses two reflective plates that sit in the flow and deflect the
-sound from one transducer to another, the second reflects sound of the bottom
-of the pipe to the other transducer (images can be seen below). The issue we
-found with both of these designs is that, because the transducers are exposed
-to the flow and one introduces reflectors to the flow, they both introduce disturbance into the flow and give an uneven flow profile.
-			</p>
-
-<img src="img/meter_sketch1.png" style="max-width:48%" align="left"> 
-<img src="img/meter_sketch2.png" style="max-width:48%" align="right">
-<div style="clear: both"></div>
-
-<p>
-This is why we decided to create a completely non intrusive water meter, using an approach that is similar to the clamp-on ultrasonic meters. This
-way we do not introduce disturbances to the flow and the meter is watertight by
-design. As with anything new the design underwent many stages of trial and
-error being tested against the designs that are already out there.
-
-During our testing we focused on two main things:
-<ul>
-
-<li>∆ToF drift, this is the absolute error in the ∆ToF – the difference in time between sound travelling with the flow and sound travelling against the flow. This is the parameter that determines the accuracy of the meter at low flow. For this, we have achieved typical values of under 20ps, which equates to accurate performance at flows as low as 70lph.</li>
-
-<li>The error due to swirl. It is one of the most common disturbances and can drastically affect the meter readings. We have found that for some ultrasonic meter designs swirl can introduce an error as big as 20%. Below is a picture of an attachment that we used upstream of our meter to generate the disturbance.</li>
-</ul>
-</p>
-<article class="media">
-	<figure class="media-center">
-<img src="img/swirl_connector.png"> 
-</figure>
-</article>
-
-<p>
-We are finally satisfied with the flowcell performance and we are now focusing on testing and "debugging" it, as well as finishing other parts of the development, mainly the electronics.
-At the moment, we are looking for companies that would be able to help us with the testing and calibration.
-</p>
-        </div>
-    </div>
-<br>
-
-
-    <div class="container">
-        <h1 class="title">04/02/20: Water meter updates</h1>
-        <div class="content is-medium">
-
-Today I wanted to reveal a bit of information on one of the projects that we have been working on in the last few months.
-
-We are entering the late phases in our inline DN50 ultrasonic water meter development. The demand for this class of meters have been growing and we are looking to provide a modern affordable solution.
-
-The three main areas that we are trying to address in our meter are as follows:
-
-<ul>
-<li> Accuracy. For an ultrasonic meter, the two critical areas are the low end of the flow speed range, where the accuracy is limited by the zero-flow drift, and the high end, where various flow dynamics play the key role. I will write more on this in the future.</li>
-
-<li> Ease of use and reliability. We have designed the meter to be water-tight by design. The only source of leakage could be the threads or direct damage to the meter body. We are planning to conduct additional testing to make sure that theses risks are brought down to a minimum.
-At the moment, we are gathering information from companies installing and maintaining the meters about the features that are important to them, common problems and misconceptions.</li>
-
-<li>Low cost. We aim to achieve this by having a fully injection moulded meter body, simple assembly and modular electronics. Currently we are working on the heart of the meter – the ultra-low power metrological module that does the ultrasonic measurements and the relevant flow calculations. Any additional functionality such as communication modules can be added on top of that. </li>
-</ul>
-
-<p>
-In case you would like request some additional information, are interested in testing one of our prototypes, wish for a specific feature or simply want to chat and provide feedback – feel free to contact us.
-</p>  
-        </div>
-    </div>
+<div class="buttons has-addons is-centered">
+  <button class="button is-success is-selected">1</button>
+  <button class="button" href=/news_page2 data-navigo>2</button>
+</div>
