@@ -23,6 +23,7 @@ router
     .on("/projects", update("projects"))
     .on("/contact", update("contact"))
     .on("/news", update("news"))
+    .on("/news_page2", update("news_page2"))
     .on("/products", update("products"))
     .notFound(update("404"));
 
