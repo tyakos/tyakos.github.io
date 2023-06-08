@@ -135,59 +135,6 @@ tr:nth-child(even) {
 	    </div>
 			<br>
 
-	    <div class="container">
-        <h1 class="title">18/02/22: Water meter calibration and ultra low flow data</h1>
-        <div class="content is-medium">
-       	<p> For the last two months we had our meters tested at a fantastic facility with very accurate equipement allowing both high and low flow testing. <br>
-       		Getting straight to the results (keep in mind this is a DN50 meter).
-			<ul>
-			 	<li>±1% error on 1 - 50 m<sup>3</sup>/h with 1% repeatability.</li>
-				<li>±5% error down to about 40 l/h with about 2% repeatability.</li>	 	
-			</ul>
-		The fastest flow we could test was about 59 m<sup>3</sup>/h. At that point the repeatability started going up to about 2%. This is, more or less, to be expected as 59 m<sup>3</sup>/h roughly corresponds to 10 m/s, which is typically the maximum measured flow speed by inline ultrasonic meters with a single transducer pair. <br>
-		The lowest flow that was tested was 15 l/h and we managed to get a measurement, but unfortunately there is no repeatability data that I can share.<br>
-		We are going to incorporate this data (including the ultra-low flow data points) into the calibration curve to futher improve linearity.
-		</p>	
-		<p>	The data suggests that the meter is actually R400 rather than R250 as we thought previously. Of course, more testing is required to verify that.<br>
-			However, we have decided that even R400 does not sound that impressive for a new ultrasonic meter. As mentioned, increasing Q<sub>3</sub> is difficult and probably unnecessary for a water meter. Hence Q<sub>1</sub> has to go down. 
-		</p>
-		<p>	Ultrasonic meters low-flow performance is commonly limited by zero-flow drift, which usually occurs with changes in temperature. Basically, this is the value that the meter reads when no flow is present.
-		    This introduces an absolute error into the measurements that mostly determines repeatability at low flows. For example, a zero-flow drift of ±1 l/h would give 2/40*100 = 5% repeatability at 40 l/h. <br>
-			So we have begun work on an improved version of the meter that would have a lower zero-flow drift and we will be testing the prototypes next week. 
-		</p>
-		<p>	Lastly, we have designed and built a few OEM-style modules with the minimum number of components in it, basically just the ultra-low-power ultrasonic measurement part: meter body, transducers and the electronics with a RS232/I<sup>2</sup>C/SPI interface. With enough demand we are planning to offer evaluation kits. As always, contact us at <a href="mailto:info@intsonic.com">info@intsonic.com</a> to register your interest.
-		</p>
-		<p> We will be back with more regular updates regarding this project!
-		</p>
-        </div>
-	    </div>
-			<br>
-
-
-	    <div class="container">
-        <h1 class="title">09/11/21: Water meter: lid design updates</h1>
-        <div class="content is-medium">
-       	<p> A quick update on the top lid design. It has been changed to make the assembly process simpler and save costs. The idea is to have the top part of the enclosure made out of a clear plastic – but only transparent in the parts where it is necessary and frosted elsewhere. </p>
-       	<p> Some photos of the 3D-printed prototype below. The injection-moulded part will obviously be clearer. </p>
-       	<p> 
-       	<img src="img/meter_photos/newlid_1.jpg" style="max-width:32%" align="left">
-		<img src="img/meter_photos/newlid_2.jpg" style="max-width:32%" align="left">
-		<img src="img/meter_photos/newlid_3.jpg" style="max-width:32%" align="left"> 
-		<div style="clear: both"></div>
-		</p>
-        </div>
-	    </div>
-			<br>
-
-	    <div class="container">
-        <h1 class="title">01/11/21: Water meter: further calibration and accuracy</h1>
-        <div class="content is-medium">
-       	<p> Another calibration run using a different rig that allowed us to test much lower flowrates. At 300 l/h we got a ±2% error, and ±1.5% on 1 - 40 m<sup>3</sup>/h.</p>
-       	<p> So we have again updated the calibration curve which should get us sub 1% linearity on 0.6 - 48 m<sup>3</sup>/h.</p>
-       	<p> 5% error can likely be achived on flowrates as low as 120 l/h. Hence for OIML/MID certification the values would likely be as follows: Q<sub>1</sub>=0.160 m<sup>3</sup>/h, Q<sub>3</sub>=40 m<sup>3</sup>/h.</p>
-        </div>
-	    </div>
-			<br>
 
 
 <div class="buttons has-addons is-centered">
